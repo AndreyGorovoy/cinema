@@ -1,0 +1,43 @@
+To Use these web pages:
+
+You must install an apache server (version 2.4.12 used for testing),
+Next MYSQL server should be installed (version 5.6.19 used for testing).
+
+On the mysql server import the cnet343proj.sql file to quickly compile the appropriate tables and sample data included within it
+Then add the files & folders inside of the included www folder into the folder /etc/www on the server, this will allow the apache server to display these when accessed
+
+Finally you must configure the dbconf.php file to point at your relevant database server. 
+The items that must be defined are:
+
+The details of the master server for the test connection
+$server = 'localhost'
+$user = 'user'
+$password = 'pass'
+$database = 'cnet343proj'
+
+
+The details of the masterServer as a main connection
+ 
+DB_SERVER: This is the ipaddress or dns name of your database server and the port in the format of: 127.0.0.1:3306
+
+DB_USERNAME: The username used to login to the database server i.e. root
+
+DB_PASSWORD: The password used to login to the database server
+
+DB_DATABASE: This is the name of the individal database that you wish to connect to
+
+
+
+The details of hte slave server should the connection test to the master server fail
+
+DB_SERVER: This is the ipaddress or dns name of your database server and the port in the format of: 127.0.0.1:3306
+
+DB_USERNAME: The username used to login to the database server i.e. root
+
+DB_PASSWORD: The password used to login to the database server
+
+DB_DATABASE: This is the name of the individal database that you wish to connect to
+
+CHANGES
+v.02 - Add film feature is now working
+v.03 - 
